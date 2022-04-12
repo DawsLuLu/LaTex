@@ -1,0 +1,147 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage{graphicx}
+\geometry{a4paper, total={150mm,237mm}, left=30mm, top=30mm}
+\graphicspath{ {c:/LATEXImages/} }
+
+
+\title{Fixtures PLC template}
+\author{Angel Granja and Dawson Lu}
+\date{April 8th, 2017}
+
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Introduction}
+	
+	This document is meant as a guide to help with using the fixtures PLC template created by Angel Granja. 
+	
+	\section{Getting Started}
+	
+	The fixtures PLC template can be found on the path U:\slash68-SUPR-SupremeTooling\slash Fixtures\slash AngelGranja\slash TemplateNXPLC\slash PLC
+	
+	\section{CPU Rack}
+	
+	On the Multiview Explorer go to Configurations and Setup $>$ CPU/Expansion Racks and double click "CPU Rack".
+	
+	Delete any expansions modules and NX-ID5442/NX-OD5256 not needed according to the Electrical Schematics of the project.
+	
+	\leavevmode\\
+	
+	\includegraphics[width=\linewidth]{Image0001}
+	
+	\section{I/O Setup}
+	
+	On the Multiview Explorer go to Configurations and Setup $>$ Programming $>$ POUs $>$ Programs $>$ IOAllocationPLC and double click "IOSetup".
+	
+	\leavevmode\\
+	
+	\includegraphics[width=\linewidth]{Image0002}
+	
+	\subsection{INPUTCard2}
+	
+	Starting with INPUTCard2, match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective function.
+	
+	\leavevmode\\
+	
+	\includegraphics[width=\linewidth]{Image0003}
+	
+	\subsection{useWithPheonixSection}
+	
+	Use only for Pheonix Safety Controller is present. 
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective function.
+	
+	\leavevmode\\
+	
+	\includegraphics[width=\linewidth]{Image0004}
+	
+	\subsection{PartsPresentSettings}
+	
+	Use for part present sensors. 
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective sensor. Ensure that LFTPX\_ENABLE is set to "TRUE" for all part present sensors used.
+	
+	\leavevmode\\
+	
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{Image0005}
+	\end{center}
+	
+	\subsection{TabSettings}
+	
+	Use for tab present sensors. 
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective sensor. Ensure that ENABLE is set to "TRUE" for all tab present sensors used.
+	
+	\leavevmode\\
+	
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{Image0006}
+	\end{center}
+	
+	\subsection{FoamSettings}
+	
+	Use for foam present sensors. 
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective sensor. Ensure that ENABLE is set to "TRUE" for all foam present sensors used.
+	
+	\leavevmode\\
+	
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{Image0007}
+	\end{center}
+	
+	\subsection{xySettings}
+	
+	Use for all miscellaneous sensors such as punch through sensors. 
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective sensor. Ensure that ENABLE is set to "TRUE" for all sensors used.
+	
+	\leavevmode\\
+	
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{Image0008}
+	\end{center}
+	
+	\subsection{ClipSensorSettings}
+	
+	Use for all clip in holder and clip on part sensors. 
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective sensor. 
+	
+	\leavevmode\\
+	
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{Image0009}
+	\end{center}
+	
+	\subsection{ZONEXIO}
+	
+	Use for all Pnuematic valves and actuators. 
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the respective sensor. Ensure that ENABLE is set to "TRUE" for all pnuematic devices used.
+	
+	\leavevmode\\
+	
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{Image0010}
+	\end{center}
+	
+	\subsection{OUTPUTCardX}
+	
+	Use for all output devices such as leak tests and alarms.
+	
+	Match the assigned circuit ID (format MUXIDXX or MUXODXX) to the output of the respective devices. 
+	
+	\leavevmode\\
+	
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{Image0011}
+	\end{center}
+	
+\end{document}
+
